@@ -3,5 +3,15 @@
 
 .sky{background-image:url('sky.png');background-position:center 72%}.game-sky{background-size:cover;background-position:center 76%}.game-sky .goal{opacity:.85}.game-sky:has(#pilot){isolation:isolate}.sky-caption{background:linear-gradient(transparent,#ecf9ffd9);border-radius:12px;padding:12px 10px;margin:0 -8px -10px}.game-sky .sky-label{font-size:10px}
 .game-sky{background-size:auto 125%}.choice{overflow-wrap:anywhere}.sky-caption strong{line-height:1.5}.game-top>span{min-width:0}.game-top>button{flex-shrink:0}
-.game-sky.crash .pilot{bottom:0!important;transform:rotate(35deg);transition:bottom .6s ease-in,transform .6s}.game-sky.clear .pilot{left:76%;bottom:12%!important;transition:left .7s ease,bottom .7s ease}.game-sky.clear{box-shadow:0 0 0 3px #52d9b1}.game-sky.crash{box-shadow:0 0 0 3px #efac88}
+.game-sky.crash .pilot{bottom:0!important;transform:rotate(35deg);transition:bottom .6s ease-in,transform .6s}.game-sky.clear{box-shadow:0 0 0 3px #52d9b1}.game-sky.crash{box-shadow:0 0 0 3px #efac88}
 .game-sky{background-size:120% auto;background-repeat:no-repeat}
+
+/* Avatar themes share independent scenery and goal layers. */
+body{--scenery:url('plane.png')}body[data-pilot="wizard"]{--scenery:url('wizard.png')}body[data-pilot="bird"]{--scenery:url('bird.png')}
+.sky{background-image:var(--scenery);background-size:cover;background-position:center bottom}.pilot{font-size:44px}.game-sky{background-image:none;background-color:#a1dafa}.game-sky .pilot{left:12%;font-size:38px;transform:translateX(-50%);transition:bottom .25s linear,left .45s ease}
+.scenery-track{position:absolute;inset:0 auto 0 0;width:400%;display:flex;animation:scenery 40s linear infinite}.scenery-track i{display:block;width:25%;height:100%;flex-shrink:0;background-image:var(--scenery);background-size:cover;background-position:center bottom}.scenery-track i:nth-child(even){transform:scaleX(-1)}
+.cloud-track{position:absolute;inset:5% auto auto 0;width:200%;display:flex;animation:scenery 16s linear infinite;pointer-events:none}.cloud-track span{display:block;width:25%;font-size:42px;color:#fff9;text-align:center}.cloud-track span:nth-child(even){padding-top:22px}body[data-pilot="wizard"] .cloud-track span{color:#8d91b06b}
+.game-sky .goal{left:88%;right:auto;transform:translateX(-50%);opacity:1;z-index:1}.game-sky .altitude,.game-sky .altitude-number,.game-sky .sky-label,.game-sky .distance{z-index:3}.game-sky.ended .scenery-track,.game-sky.ended .cloud-track,.game-sky.paused .scenery-track,.game-sky.paused .cloud-track{animation-play-state:paused}
+.game-sky.clear .pilot,.game-sky.timeout .pilot{transition:left 1.05s ease-in-out,bottom .25s linear}.game-sky.crash .pilot{transform:translateX(-50%) rotate(35deg)}
+body[data-pilot="wizard"] .sky-caption{background:linear-gradient(transparent,#222749e8);color:#fff}.stats{gap:18px}.game-footer{gap:10px;flex-wrap:wrap}@keyframes scenery{to{transform:translateX(-50%)}}
+@media(max-width:380px){header .tag{display:none}.stats{gap:12px}.stats strong{font-size:23px}.game-top{gap:8px}.game-top button{font-size:12px;padding:8px}.choice{font-size:15px;gap:6px}}
