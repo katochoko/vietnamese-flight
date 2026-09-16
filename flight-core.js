@@ -70,7 +70,7 @@
       if(this.finished)return;
       if(this.phase==='review'){
         if(!this.pending.size){this.end('clear');return;}
-        let kind=this.reviewSlot%3===2?'review':'good';this.reviewSlot++;
+        let kind=this.reviewSlot%2===1?'review':'good';this.reviewSlot++;
         this.word=this.pickReview(kind);
         if(!this.word){kind=kind==='good'?'review':'good';this.word=this.pickReview(kind);}
         this.questionKind=kind;
