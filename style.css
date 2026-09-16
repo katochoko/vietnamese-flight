@@ -4,3 +4,4 @@
 .sky{background-image:url('sky.png');background-position:center 72%}.game-sky{background-size:cover;background-position:center 76%}.game-sky .goal{opacity:.85}.game-sky:has(#pilot){isolation:isolate}.sky-caption{background:linear-gradient(transparent,#ecf9ffd9);border-radius:12px;padding:12px 10px;margin:0 -8px -10px}.game-sky .sky-label{font-size:10px}
 .game-sky{background-size:auto 125%}.choice{overflow-wrap:anywhere}.sky-caption strong{line-height:1.5}.game-top>span{min-width:0}.game-top>button{flex-shrink:0}
 .game-sky.crash .pilot{bottom:0!important;transform:rotate(35deg);transition:bottom .6s ease-in,transform .6s}.game-sky.clear .pilot{left:76%;bottom:12%!important;transition:left .7s ease,bottom .7s ease}.game-sky.clear{box-shadow:0 0 0 3px #52d9b1}.game-sky.crash{box-shadow:0 0 0 3px #efac88}
+.game-sky{background-size:120% auto;background-repeat:no-repeat}
